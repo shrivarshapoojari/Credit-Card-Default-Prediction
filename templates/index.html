@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .column {
+            width: 48%; /* Adjust as needed */
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input,
+        select {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="{{ url_for('predict')}}"method="post">
+        <h2>Credit Card Information Form</h2>
+
+        <div class="column">
+             
+
+            <label for="creditLimit">Credit Limit:</label>
+            <input type="number" id="creditLimit" name="creditLimit" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+            </select>
+
+            <label for="education">Education:</label>
+            <select id="education" name="education" required>
+                <option value="1">Graduate School</option>
+                <option value="2">University</option>
+                <option value="3">High School</option>
+              
+                 
+            </select>
+
+            <label for="maritalStatus">Marital Status:</label>
+            <select id="maritalStatus" name="maritalStatus" required>
+                <option value="1">Married</option>
+                <option value="2">Single</option>
+                
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="repaymentStatusSep">Repayment Status 1 Month Past:</label>
+            <select id="repaymentStatusSep" name="repaymentStatusSep" required>
+                <option value="-2">No Consumption But Still Paid</option>
+                <option value="-1">Duly Paid</option>
+                <option value="1">1 Month Delay</option>
+                <option value="2">2 Month Delay</option>
+                
+            </select>
+            
+
+            <label for="repaymentStatusAug">Repayment status 2 Month Past</label>
+            <select id="repaymentStatusAug" name="repaymentStatusAug" required>
+                <option value="-2">No Consumption But Still Paid</option>
+                <option value="-1">Duly Paid</option>
+                <option value="1">1 Month Delay</option>
+                <option value="2">2 Month Delay</option>
+                
+            </select>
+
+            <label for="repaymentStatusJul">Repayment status 3 Month Past</label>
+            <select id="repaymentStatusJul" name="repaymentStatusJul" required>
+                <option value="-2">No Consumption But Still Paid</option>
+                <option value="-1">Duly Paid</option>
+                <option value="1">1 Month Delay</option>
+                <option value="2">2 Month Delay</option>
+                
+            </select>
+
+            <label for="repaymentStatusJun">Repayment status 4 Month Past</label>
+            <select id="repaymentStatusJun" name="repaymentStatusJun" required>
+                <option value="-2">No Consumption But Still Paid</option>
+                <option value="-1">Duly Paid</option>
+                <option value="1">1 Month Delay</option>
+                <option value="2">2 Month Delay</option>
+                
+            </select>
+
+            <label for="repaymentStatusMay">Repayment status 5 Month Past</label>
+            <select id="repaymentStatusMay" name="repaymentStatusMay" required>
+                <option value="-2">No Consumption But Still Paid</option>
+                <option value="-1">Duly Paid</option>
+                <option value="1">1 Month Delay</option>
+                <option value="2">2 Month Delay</option>
+                
+            </select>
+
+            <label for="repaymentStatusApr">Repayment Status 6 Month Past</label>
+            <select id="repaymentStatusApr" name="repaymentStatusApr" required>
+                <option value="-2">No Consumption But Still Paid</option>
+                <option value="-1">Duly Paid</option>
+                <option value="1">1 Month Delay</option>
+                <option value="2">2 Month Delay</option>
+                
+            </select>
+        </div>
+
+        <div class="column">
+            <label for="billAmtSep">Amount of bill statement in Past 1 Month</label>
+            <input type="number" id="billAmtSep" name="billAmtSep" required>
+
+            <label for="billAmtAug">Amount of bill statement in Past 2 Month</label>
+            <input type="number" id="billAmtAug" name="billAmtAug" required>
+
+            <label for="billAmtJul">Amount of bill statement in Past 3 Month</label>
+            <input type="number" id="billAmtJul" name="billAmtJul" required>
+
+            <label for="billAmtJun">Amount of bill statement in Past 4 Month</label>
+            <input type="number" id="billAmtJun" name="billAmtJun" required>
+
+            <label for="billAmtMay">Amount of bill statement in Past 5 Month</label>
+            <input type="number" id="billAmtMay" name="billAmtMay" required>
+
+            <label for="billAmtApr">Amount of bill statement in Past 6 Month</label>
+            <input type="number" id="billAmtApr" name="billAmtApr" required>
+
+            <label for="payAmtSep">Amount of previous payment in past 1 Month</label>
+            <input type="number" id="payAmtSep" name="payAmtSep" required>
+
+            <label for="payAmtAug">Amount of previous payment in past 2 Month</label>
+            <input type="number" id="payAmtAug" name="payAmtAug" required>
+
+            <label for="payAmtJul">Amount of previous payment in past 3 Month</label>
+            <input type="number" id="payAmtJul" name="payAmtJul" required>
+
+            <label for="payAmtJun">Amount of previous payment in past 4 Month</label>
+            <input type="number" id="payAmtJun" name="payAmtJun" required>
+
+            <label for="payAmtMay">Amount of previous payment in past 5 Month  </label>
+            <input type="number" id="payAmtMay" name="payAmtMay" required>
+
+            <label for="payAmtApr">Amount of previous paymentpast in past 6 </label>
+            <input type="number" id="payAmtApr" name="payAmtApr" required>
+
+             
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

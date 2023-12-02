@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #e74c3c, #c0392b); /* Gradient background (Red) */
+            color: #ffffff; /* White text color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #animation-container {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft box shadow effect */
+        }
+
+        #warning-symbol {
+            font-size: 100px;
+            color: #e74c3c; /* Red color */
+            animation: shake 2s infinite; /* Shake animation */
+        }
+
+        p {
+            font-size: 24px;
+            margin-top: 20px;
+            font-weight: bold;
+            color:  #e74c3c;
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25%, 75% {
+                transform: translateX(-10px);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+        }
+    </style>
+    <title>Reduce Limit Balance</title>
+</head>
+<body>
+    <div id="animation-container">
+        <div id="warning-symbol">&#9888;</div>  
+        <p>High chance of default. Reduce limit balance to minimize financial loss.</p>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

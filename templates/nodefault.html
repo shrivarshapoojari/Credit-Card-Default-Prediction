@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #4CAF50, #32CD32); /* Gradient background */
+            color: #ffffff; /* White text color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #animation-container {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft box shadow effect */
+        }
+
+        #success-symbol {
+            font-size: 100px;
+            color: #28a745; /* Emerald green color */
+            animation: bounce 2s infinite; /* Bounce animation */
+        }
+
+        p {
+            font-size: 24px;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #28a745
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+    <title>Loan Repayment</title>
+</head>
+<body>
+    <div id="animation-container">
+        <div id="success-symbol">&#10003;</div>
+        <p >Your customer will surely repay the loan!</p>
+    </div>
+</body>
+</html>
