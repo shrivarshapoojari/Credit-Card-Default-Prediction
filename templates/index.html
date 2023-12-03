@@ -7,13 +7,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            background-color: #1378de;
             margin: 0;
             padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
+           min-height: 100vh;
         }
 
         form {
@@ -26,6 +26,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .column {
@@ -73,7 +75,7 @@
 <body>
 
     <form action="{{ url_for('predict')}}"method="post">
-        <h2>Credit Card Information Form</h2>
+        <h2>Customer Information Form</h2>
 
         <div class="column">
              
@@ -196,7 +198,7 @@
             <label for="payAmtMay">Amount of previous payment in past 5 Month  </label>
             <input type="number" id="payAmtMay" name="payAmtMay" required>
 
-            <label for="payAmtApr">Amount of previous paymentpast in past 6 </label>
+            <label for="payAmtApr">Amount of previous payment in past 6 Month </label>
             <input type="number" id="payAmtApr" name="payAmtApr" required>
 
              
