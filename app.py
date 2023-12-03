@@ -6,9 +6,9 @@ import pandas as pd
 import pickle
 from sklearn.preprocessing import StandardScaler
 
-application=Flask(__name__)
+app=Flask(__name__)
  
-app=application
+
  
  
 
