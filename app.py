@@ -65,5 +65,5 @@ def predict():
     
 
 
-if __name__=='main':
-    app.run(host="0.0.0.0")
+# if __name__=='main':
+#     app.run(debug=True)
