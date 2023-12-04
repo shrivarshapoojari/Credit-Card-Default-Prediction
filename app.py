@@ -5,13 +5,7 @@ import numpy as np
 import pandas as pd
 import pickle
 from sklearn.preprocessing import StandardScaler
-
 app=Flask(__name__)
- 
-
- 
- 
-
 model=pickle.load(open('models/randomforestn.pkl','rb'))
 standard_scaler=pickle.load(open('models/scalern.pkl','rb'))
 
@@ -45,14 +39,10 @@ def predict():
         pay4=int(request.form.get('payAmtJun'))
         pay5=int(request.form.get('payAmtMay'))
         pay6=int(request.form.get('payAmtApr'))
-
-       
-
         new_data=[[credit_limit, gender,education, marriage, age, repay1,repay2,repay3,repay4,repay5,repay6, bill1, bill2, bill3, bill4, bill5, bill6, pay1, pay2, pay3, pay4, pay5, pay6]]
-        print(new_data)
         scaled_data = standard_scaler.transform(new_data)
         result=model.predict(scaled_data)
-        print(result)
+        Z
         prediction_result = result[0]
         if prediction_result==0 :
             return render_template('nodefault.html')
