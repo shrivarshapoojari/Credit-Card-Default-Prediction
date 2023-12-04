@@ -42,7 +42,7 @@ def predict():
         new_data=[[credit_limit, gender,education, marriage, age, repay1,repay2,repay3,repay4,repay5,repay6, bill1, bill2, bill3, bill4, bill5, bill6, pay1, pay2, pay3, pay4, pay5, pay6]]
         scaled_data = standard_scaler.transform(new_data)
         result=model.predict(scaled_data)
-        Z
+        print(new_data)
         prediction_result = result[0]
         if prediction_result==0 :
             return render_template('nodefault.html')
